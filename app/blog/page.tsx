@@ -73,7 +73,7 @@ export default async function handler(req, res) {
       "Key principles and techniques for creating user interfaces that are both beautiful and functional.",
     date: "2023-07-18",
     readTime: "9 min read",
-    author: "Dat David",
+    author: "Christ David",
     authorRole: "UI/UX Designer",
     authorAvatar:
       "/blogs/david.JPG?height=200&width=200&query=latina woman designer headshot",

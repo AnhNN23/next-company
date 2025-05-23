@@ -440,13 +440,13 @@ function BlogHeader() {
         </div>
       </div>
     `,
-    date: "2023-07-18",
+    date: "2024-07-18",
     readTime: "9 min read",
-    author: "Emma Rodriguez",
+    author: "Christ David",
     authorRole: "UI/UX Designer",
     authorBio:
-      "Emma is a senior UI/UX designer with a passion for creating beautiful, intuitive interfaces. She has worked with startups and enterprise companies to improve their digital products.",
-    authorAvatar: "/latina-designer-headshot.png",
+      "Christ David is a senior UI/UX designer with a passion for creating beautiful, intuitive interfaces. She has worked with startups and enterprise companies to improve their digital products.",
+    authorAvatar: "/blogs/david.JPG?height=200&width=200&query=latina woman designer headshot",
     tags: ["Design", "UI/UX", "User Experience"],
     image: "/blogs/des11.jpg?height=400&width=600&query=colorful UI design wireframes",
     relatedPosts: [6, 7],
