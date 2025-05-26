@@ -78,7 +78,7 @@ const jobListings = {
     preferred: [],
     benefits: [
       "Negotiable salary and performance-based bonuses",
-      "Flexible working hours and remote options",
+      "Flexible working hours",
       "Professional development opportunities",
       "Team-building activities and retreats",
       "Supportive and inclusive team culture",
@@ -508,11 +508,7 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
 
   // Determine badge variant based on job type
   const getTypeBadge = (type) => {
-    if (type.toLowerCase().includes("remote")) {
-      return "remote";
-    } else if (type.toLowerCase().includes("hybrid")) {
-      return "hybrid";
-    } else {
+    if (type.toLowerCase().includes("fulltime")) {
       return "fulltime";
     }
   };
