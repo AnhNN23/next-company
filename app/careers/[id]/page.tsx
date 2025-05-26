@@ -197,8 +197,8 @@ const jobListings = {
     relatedJobs: ["eng-1", "eng-3"],
   },
 
-  "eng-4": {
-    id: "eng-4",
+  "eng-3": {
+    id: "eng-3",
     title: "iOS Developer",
     location: "Da Nang, Vietnam",
     department: "Engineering",
@@ -643,295 +643,215 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
             </TooltipProvider>
           </motion.div>
 
-          {/* Tabs Navigation */}
+          {/* Job Overview */}
           <motion.div variants={itemVariants}>
-            <Tabs defaultValue="overview" onValueChange={setActiveTab}>
-              <TabsList className="w-full justify-start mb-6 overflow-x-auto">
-                <TabsTrigger value="overview">Overview</TabsTrigger>
-                <TabsTrigger value="responsibilities">
-                  Responsibilities
-                </TabsTrigger>
-                <TabsTrigger value="requirements">Requirements</TabsTrigger>
-                <TabsTrigger value="benefits">Benefits</TabsTrigger>
-                {/* <TabsTrigger value="team">Team</TabsTrigger> */}
-              </TabsList>
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#130D68]">
+                  Job Overview
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700 leading-relaxed">{job.overview}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
 
-              <TabsContent value="overview" className="space-y-6">
-                <Card className="border-none shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-[#130D68]">
-                      Job Overview
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-slate-700 leading-relaxed">
-                      {job.overview}
-                    </p>
-                  </CardContent>
-                </Card>
+          {/* Required Skills */}
+          <motion.div variants={itemVariants}>
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-[#130D68]">
+                  Required Skills
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {job.skills.map((skill) => (
+                    <div
+                      key={skill}
+                      className="px-3 py-1 rounded-full bg-[#130D68]/10 text-[#130D68] text-sm font-medium"
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
 
-                <Card className="border-none shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-[#130D68]">
-                      Required Skills
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {job.skills.map((skill) => (
-                        <div
-                          key={skill}
-                          className="px-3 py-1 rounded-full bg-[#130D68]/10 text-[#130D68] text-sm font-medium"
-                        >
-                          {skill}
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+          {/* Key Highlights */}
+          <motion.div variants={itemVariants}>
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-[#130D68]">
+                  Key Highlights
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="grid gap-4 sm:grid-cols-2">
+                <div className="flex items-start">
+                  <div className="mr-2 mt-0.5">
+                    <Building className="h-5 w-5 text-[#130D68]" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Department</h3>
+                    <p className="text-sm text-slate-700">{job.department}</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-2 mt-0.5">
+                    <Briefcase className="h-5 w-5 text-[#130D68]" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Employment Type</h3>
+                    <p className="text-sm text-slate-700">{job.type}</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-2 mt-0.5">
+                    <MapPin className="h-5 w-5 text-[#130D68]" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Location</h3>
+                    <p className="text-sm text-slate-700">{job.location}</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-2 mt-0.5">
+                    <GraduationCap className="h-5 w-5 text-[#130D68]" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Experience</h3>
+                    <p className="text-sm text-slate-700">{job.experience}</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-2 mt-0.5">
+                    <DollarSign className="h-5 w-5 text-[#130D68]" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Salary Range</h3>
+                    <p className="text-sm text-slate-700">{job.salary}</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-2 mt-0.5">
+                    <Clock className="h-5 w-5 text-[#130D68]" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Posted Date</h3>
+                    <p className="text-sm text-slate-700">{formattedDate}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
 
-                <Card className="border-none shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-[#130D68]">
-                      Key Highlights
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="grid gap-4 sm:grid-cols-2">
-                    <div className="flex items-start">
-                      <div className="mr-2 mt-0.5">
-                        <Building className="h-5 w-5 text-[#130D68]" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium">Department</h3>
-                        <p className="text-sm text-slate-700">
-                          {job.department}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-2 mt-0.5">
-                        <Briefcase className="h-5 w-5 text-[#130D68]" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium">Employment Type</h3>
-                        <p className="text-sm text-slate-700">{job.type}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-2 mt-0.5">
-                        <MapPin className="h-5 w-5 text-[#130D68]" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium">Location</h3>
-                        <p className="text-sm text-slate-700">{job.location}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-2 mt-0.5">
-                        <GraduationCap className="h-5 w-5 text-[#130D68]" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium">Experience</h3>
-                        <p className="text-sm text-slate-700">
-                          {job.experience}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-2 mt-0.5">
-                        <DollarSign className="h-5 w-5 text-[#130D68]" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium">Salary Range</h3>
-                        <p className="text-sm text-slate-700">{job.salary}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-2 mt-0.5">
-                        <Clock className="h-5 w-5 text-[#130D68]" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium">Posted Date</h3>
-                        <p className="text-sm text-slate-700">
-                          {formattedDate}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
+          {/* Key Responsibilities */}
+          <motion.div variants={itemVariants}>
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#130D68]">
+                  Key Responsibilities
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-4">
+                  {job.responsibilities.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-[#130D68] mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </motion.div>
 
-              <TabsContent value="responsibilities" className="space-y-6">
-                <Card className="border-none shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-[#130D68]">
-                      Key Responsibilities
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-4">
-                      {job.responsibilities.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-[#130D68] mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-700">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </TabsContent>
+          {/* Requirements */}
+          <motion.div variants={itemVariants}>
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#130D68]">
+                  Requirements
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-4">
+                  {job.requirements.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-[#130D68] mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </motion.div>
 
-              <TabsContent value="requirements" className="space-y-6">
-                <Card className="border-none shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-[#130D68]">
-                      Requirements
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-4">
-                      {job.requirements.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-[#130D68] mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-700">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+          {/* Preferred Qualifications */}
+          {job.preferred && (
+            <motion.div variants={itemVariants}>
+              <Card className="border-none shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-xl text-[#130D68]">
+                    Preferred Qualifications
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    {job.preferred.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-[#130D68]/70 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-700">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          )}
 
-                {job.preferred && (
-                  <Card className="border-none shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl text-[#130D68]">
-                        Preferred Qualifications
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-4">
-                        {job.preferred.map((item, index) => (
-                          <li key={index} className="flex items-start">
-                            <CheckCircle className="h-5 w-5 text-[#130D68]/70 mr-3 mt-0.5 flex-shrink-0" />
-                            <span className="text-slate-700">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                )}
-              </TabsContent>
-
-              <TabsContent value="benefits" className="space-y-6">
-                <Card className="border-none shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-[#130D68]">
-                      Benefits & Perks
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      {job.benefits.map((benefit, index) => (
-                        <div key={index} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-[#130D68] mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-700">{benefit}</span>
-                        </div>
-                      ))}
+          {/* Benefits & Perks */}
+          <motion.div variants={itemVariants}>
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#130D68]">
+                  Benefits & Perks
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {job.benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-[#130D68] mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700">{benefit}</span>
                     </div>
-                  </CardContent>
-                </Card>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
 
-                <Card className="border-none shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-[#130D68]">
-                      Our Company Values
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-4">
-                      {job.companyValues.map((value, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-[#130D68] mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-700">{value}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="team" className="space-y-6">
-                <Card className="border-none shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-[#130D68]">
-                      Meet Your Team
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
-                      <Avatar className="h-24 w-24 border-2 border-[#130D68]">
-                        <AvatarImage
-                          src={job.teamInfo.managerAvatar || "/placeholder.svg"}
-                          alt={job.teamInfo.manager}
-                        />
-                        <AvatarFallback>
-                          {job.teamInfo.manager.charAt(0)}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <h3 className="text-xl font-bold text-[#130D68]">
-                          {job.teamInfo.manager}
-                        </h3>
-                        <p className="text-slate-600 mb-2">
-                          {job.teamInfo.managerTitle}
-                        </p>
-                        <p className="text-slate-700">
-                          {job.teamInfo.description}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div className="flex items-start">
-                        <div className="mr-2 mt-0.5">
-                          <Users className="h-5 w-5 text-[#130D68]" />
-                        </div>
-                        <div>
-                          <h3 className="font-medium">Team Size</h3>
-                          <p className="text-sm text-slate-700">
-                            {job.teamInfo.size}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="mr-2 mt-0.5">
-                          <Briefcase className="h-5 w-5 text-[#130D68]" />
-                        </div>
-                        <div>
-                          <h3 className="font-medium">Department</h3>
-                          <p className="text-sm text-slate-700">
-                            {job.teamInfo.name}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="font-medium mb-2">Current Projects</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {job.teamInfo.projects.map((project) => (
-                          <div
-                            key={project}
-                            className="px-3 py-1 rounded-full bg-[#130D68]/10 text-[#130D68] text-sm font-medium"
-                          >
-                            {project}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
+          {/* Company Values */}
+          <motion.div variants={itemVariants}>
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-[#130D68]">
+                  Our Company Values
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-4">
+                  {job.companyValues.map((value, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-[#130D68] mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700">{value}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           </motion.div>
         </motion.div>
 
@@ -944,12 +864,23 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <Button
-                className="w-full"
-                onClick={() => setShowApplicationForm(true)}
-              >
-                Apply Now
-              </Button>
+              <div className="w-full">
+                <a
+                  href="mailto:hr.limgrow@gmail.com"
+                  className="w-full block mb-2"
+                >
+                  <Button className="w-full">Apply Now</Button>
+                </a>
+                <p className="text-sm text-gray-600">
+                  Send your application to our HR department via email:{" "}
+                  <a
+                    href="mailto:hr.limgrow@gmail.com"
+                    className="text-blue-600 font-medium hover:underline"
+                  >
+                    hr.limgrow@gmail.com
+                  </a>
+                </p>
+              </div>
               <Separator />
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -999,14 +930,7 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
                 </div>
               </div>
               <Separator />
-              <Button variant="outline" className="w-full" asChild>
-                <Link
-                  href="/careers"
-                  className="flex items-center justify-center"
-                >
-                  View Similar Jobs
-                </Link>
-              </Button>
+             
             </CardContent>
           </Card>
 
