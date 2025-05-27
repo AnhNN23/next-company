@@ -43,7 +43,7 @@ const jobListings = {
   engineering: [
     {
       id: "eng-1",
-      title: "Junior Node.js Developer",
+      title: "Node.js Developer",
       location: "Da Nang",
       department: "Engineering",
       type: "Full-time",
@@ -69,7 +69,7 @@ const jobListings = {
     },
     {
       id: "eng-2",
-      title: "Fresher/Junior Android Developer",
+      title: "Android Developer",
       location: "Da Nang",
       department: "Engineering",
       type: "Full-time",
@@ -98,7 +98,7 @@ const jobListings = {
 
     {
       id: "eng-3",
-      title: "Fresher/Junior iOS Developer",
+      title: "iOS Developer",
       location: "Da Nang",
       department: "Engineering",
       type: "Full-time",
@@ -127,7 +127,7 @@ const jobListings = {
   design: [
     {
       id: "design-1",
-      title: "Fresher/Junior UI/UX Designer",
+      title: "UI/UX Designer",
       location: "Da Nang",
       department: "Design",
       type: "Full-time",
@@ -153,7 +153,7 @@ const jobListings = {
   marketing: [
     {
       id: "marketing-1",
-      title: "Fresher/Junior/Middle UA Marketing",
+      title: "UA Marketing",
       location: "Da Nang",
       department: "Marketing",
       type: "Full-time",

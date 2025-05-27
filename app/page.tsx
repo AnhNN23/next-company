@@ -57,7 +57,7 @@ export default function HomePage() {
       subtitle: "Technology with Purpose",
       description:
         "We build cutting-edge solutions that transform industries and improve lives from our headquarters in Da Nang, Vietnam.",
-      image: "/workshop/ws1/ws1.jpg",
+      image: "/workshop/test34.jpg",
       gradient: "from-[#130D68]/10 via-[#2D2694]/5 to-transparent",
       cta: {
         primary: { text: "Explore Our Products", link: "/products" },

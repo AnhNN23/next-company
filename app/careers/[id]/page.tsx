@@ -45,7 +45,7 @@ import {
 const jobListings = {
   "eng-1": {
     id: "eng-1",
-    title: "Junior Node.js Developer",
+    title: "Node.js Developer",
     location: "Danang, Vietnam (Remote Available)",
     department: "Engineering",
     type: "Full-time",
@@ -128,7 +128,7 @@ const jobListings = {
     salary: "Negotiable",
     postedDate: "2023-06-15",
     description:
-      "We're looking for a Fresher/Junior Android Developer to develop and maintain high-quality Android applications using Kotlin. This role is key to delivering efficient, optimized, and user-friendly mobile experiences.",
+      "We're looking for a Android Developer to develop and maintain high-quality Android applications using Kotlin. This role is key to delivering efficient, optimized, and user-friendly mobile experiences.",
     overview:
       "As an Android Developer at InfinityGrowth, you will be responsible for building and optimizing Android applications that support the company's operations. You'll collaborate closely with designers, product managers, and other engineers to ensure the best mobile experience for our users.",
     responsibilities: [
