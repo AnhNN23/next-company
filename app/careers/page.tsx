@@ -175,6 +175,31 @@ const jobListings = {
       image: "/jobs/makerting.jpg",
     },
   ],
+ "business": [
+    {
+      "id": "ba-1",
+      "title": "Business Analyst",
+      "location": "Da Nang",
+      "department": "Business",
+      "type": "Full-time",
+      "experience": "1-3 years",
+      "salary": "Negotiable",
+      "postedDate": "2025-05-21",
+      "description": "The organization needs this position to collect and analyze business requirements, optimize product development strategies, and enhance user experience (UX/UI). This role plays a crucial part in ensuring that products are developed according to market demands and business goals.",
+      "skills": [
+        "Business Requirement Analysis",
+        "Product Strategy",
+        "UX/UI Optimization",
+        "Market Trend Analysis",
+        "Data-Driven Decision Making",
+        "Google Sheets",
+        "Figma",
+        "Microsoft Visio"
+      ],
+      "featured": false,
+      "image": "/jobs/ba.jpg"
+    }
+  ]
 };
 
 // Flatten all jobs for search and filtering

@@ -422,6 +422,76 @@ const jobListings = {
     image: "/jobs/makerting.jpg",
     relatedJobs: ["marketing-1", "marketing-2"],
   },
+  "ba-1": {
+    id: "ba-1",
+    title: "Business Analyst",
+    location: "Da Nang, Vietnam",
+    department: "Product",
+    type: "Full-time",
+    experience: "1-3 years",
+    salary: "Negotiable",
+    postedDate: "2025-05-30",
+    description:
+      "The organization needs this position to collect and analyze business requirements, optimize product development strategies, and enhance user experience (UX/UI). This role plays a crucial part in ensuring that products are developed according to market demands and business goals.",
+    overview:
+      "Our team collaborates closely with developers, designers, and other stakeholders to ensure products are built with the right specifications. We focus on data-driven decision-making, market trend analysis, and seamless communication between teams to drive product success.",
+    responsibilities: [
+      "Collect and analyze business requirements to optimize product development",
+      "Document and manage business requirements effectively",
+      "Analyze market trends to suggest improvements for products",
+      "Support the development team by providing insights on UX/UI optimization",
+      "Act as a bridge between developers, designers, and stakeholders to ensure alignment on product goals",
+      "Perform other business analysis-related tasks as assigned",
+    ],
+    requirements: [
+      "Bachelor's degree in Information Technology, Computer Science, or related fields",
+      "Strong problem-solving and analytical skills",
+      "Experience in documenting and presenting business requirements",
+      "Basic understanding of mobile UI/UX design principles",
+      "Familiarity with tools such as Google Sheets, Figma, or Microsoft Visio is an advantage",
+    ],
+    preferred: [],
+    benefits: [
+      "Working hours: Monday to Friday, 8:00 AM - 5:30 PM (lunch break from 12:00 PM - 1:30 PM)",
+      "Competitive salary (negotiable based on experience)",
+      "Performance-based bonuses (quarterly, holiday bonuses, year-end bonuses, 13th & 14th-month salary, team-building trips, etc.)",
+      "Company-provided laptop and work equipment",
+      "Young, dynamic working environment",
+      "Full social insurance and leave policies as per company regulations",
+    ],
+    skills: [
+      "Business Analysis",
+      "Market Trend Analysis",
+      "Documentation",
+      "UX/UI Optimization",
+      "Google Sheets",
+      "Figma",
+      "Microsoft Visio",
+    ],
+    teamInfo: {
+      name: "Product",
+      description:
+        "Our product team collaborates closely with all departments to ensure that the product is built according to market needs and business goals. We rely on data-driven insights and effective communication to achieve product success.",
+      manager: "TBD",
+      managerTitle: "Product Manager",
+      managerAvatar: "/placeholder.svg?height=200&width=200&query=business-analyst-manager",
+      size: "7 analysts and product specialists",
+      projects: [
+        "Product Development Strategy",
+        "Market Analysis Reports",
+        "UX/UI Improvement Initiative",
+      ],
+    },
+    companyValues: [
+      "Innovation: We strive to bring new ideas and innovative solutions to the market.",
+      "Collaboration: We foster teamwork and open communication across all teams.",
+      "Growth: We believe in continuous learning and career development.",
+      "Accountability: We are responsible for delivering quality and meeting business objectives.",
+      "Impact: We measure success by the value we create for the users and the company.",
+    ],
+    image: "/jobs/ba.jpg",
+    relatedJobs: ["eng-1", "design-1", "marketing-1"],
+  }
 };
 
 export default function JobDetailPage({ params }: { params: { id: string } }) {
