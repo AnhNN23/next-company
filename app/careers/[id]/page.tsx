@@ -474,7 +474,8 @@ const jobListings = {
         "Our product team collaborates closely with all departments to ensure that the product is built according to market needs and business goals. We rely on data-driven insights and effective communication to achieve product success.",
       manager: "TBD",
       managerTitle: "Product Manager",
-      managerAvatar: "/placeholder.svg?height=200&width=200&query=business-analyst-manager",
+      managerAvatar:
+        "/placeholder.svg?height=200&width=200&query=business-analyst-manager",
       size: "7 analysts and product specialists",
       projects: [
         "Product Development Strategy",
@@ -491,7 +492,7 @@ const jobListings = {
     ],
     image: "/jobs/ba.jpg",
     relatedJobs: ["eng-1", "design-1", "marketing-1"],
-  }
+  },
 };
 
 export default function JobDetailPage({ params }: { params: { id: string } }) {
@@ -931,19 +932,16 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="w-full">
-                <a
-                  href="mailto:hr.limgrow@gmail.com"
-                  className="w-full block mb-2"
-                >
+                <a href="mailto:hr@limgrow.com" className="w-full block mb-2">
                   <Button className="w-full">Apply Now</Button>
                 </a>
                 <p className="text-sm text-gray-600">
                   Send your application to our HR department via email:{" "}
                   <a
-                    href="mailto:hr.limgrow@gmail.com"
+                    href="mailto:hr@limgrow.com"
                     className="text-blue-600 font-medium hover:underline"
                   >
-                    hr.limgrow@gmail.com
+                    hr@limgrow.com
                   </a>
                 </p>
               </div>
@@ -996,7 +994,6 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
                 </div>
               </div>
               <Separator />
-             
             </CardContent>
           </Card>
 
